@@ -8,6 +8,9 @@
 #include "serial/serial.h"
 #include <qbrobotics_research_api/qbsofthand_research_api.h>
 
+//#include "../../libs/qbdevice-api-7.x.x/serial/include/serial/serial.h"
+//#include "../../libs/qbdevice-api-7.x.x/qbrobotics-driver/libs/research/include/qbrobotics_research_api/qbsofthand_research_api.h"
+
 
 #include <iostream>
 #include <string>
