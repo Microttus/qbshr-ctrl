@@ -104,5 +104,13 @@ The library can be included with
 #include "qbshr_ctr/qbSoftHandControl.hh"
 ```
 
+## File three layout
+
+```text
+├──                             : Initial startup config files for the router
+├── connector-template                 : boilerplate code for connectors
+├── crates                             : sub-crates
+│   ├──  
+```
 
 
