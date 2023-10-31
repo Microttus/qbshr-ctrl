@@ -107,9 +107,9 @@ The library can be included with
 ## 🌳Files tree layout
 
 ```text
-├──                             : Initial startup config files for the router
-├── connector-template                 : boilerplate code for connectors
-├── crates                             : sub-crates
+├── include                             : Initial startup config files for the router
+├── libs               : boilerplate code for connectors
+├── src                             : sub-crates
 │   ├──  
 ```
 
