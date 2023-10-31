@@ -1,4 +1,6 @@
-# ROS2 interface for the qbRobotics Soft Hand Research (qbshr_ctr)
+# qbshr control
+
+**ROS2 interface for the qbRobotics Soft Hand Research**
 
 ## Introduction
 
