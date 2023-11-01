@@ -38,7 +38,7 @@ the cmake file set. Guide to this is explained during installation chapter.
 First step clone the package into the src folder of your ROS2 workspace
 
 Create workspace
-```
+```commandline
 mkdir wsROS
 cd wsROS
 mkdir src
@@ -46,7 +46,7 @@ cd src
 ```
 
 Clone repository
-```
+```commandline
 https://github.com/Microttus/qbshr_ctr.git
 ```
 
@@ -54,14 +54,14 @@ https://github.com/Microttus/qbshr_ctr.git
 
 Step two clone the qbrobotics API into the lib folder of the repository.
 
-```
+```commandline
 cd qbshr_ctr/libs
 git clone --recurse-submodules https://bitbucket.org/qbrobotics/qbdevice-api-7.x.x.git
 ```
 
 Build the library for "activation"
 
-```
+```commandline
 cd qbdevice-api-7.x.x
 mkdir build
 cd build
@@ -73,7 +73,7 @@ make
 
 The package can be built and tested separately
 
-```
+```commandline
 cd ../../../..
 colcon build --packages-select qbshr_ctr
 . install/setup.bash
@@ -81,7 +81,7 @@ colcon build --packages-select qbshr_ctr
 
 One test program is available
 
-```
+```commandline
 ros2 run qbshr_ctr qbshr_test
 ```
 
@@ -109,10 +109,22 @@ The library can be included with
 ## 🌳Files tree layout
 
 ```text
-├── include                             : Initial startup config files for the router
-├── libs               : boilerplate code for connectors
-├── src                             : sub-crates
-│   ├──  
+├── include                             : Include folder for headers
+│   ├── qbshr_ctr                       : Folder for specific package header
+│       ├── qbSoftHandControl.hh        : Control class header
+│       └── qbSoftHandHandler.hh        : Serial handler header
+├── libs                                : Folder for external lib files
+│   ├── (qbdevice-api-7.x.x)            : Must be cloned from source
+│   └── README.md                       : A short reminder
+├── src                                 : Source file folder
+│   ├── qbSoftHandControl.cc            : Source file for control class
+│   ├── qbSoftHandHandler.cc            : Source file for handler class
+│   ├── robotHandControl.cc             : Example script for control
+│   └── simpTest.cc                     : Basic test script for debug
+├── .gitignore                          : Git repository file
+├── CMakeList.txt                       : Main CMake file for building package
+├── package.xml                         : Package file for ROS2
+└── README.md                           : Main instructions 
 ```
 
 
