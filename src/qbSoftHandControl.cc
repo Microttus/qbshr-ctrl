@@ -48,7 +48,7 @@ std::vector<int16_t> qbSoftHandControl::GetCurrents() {
 
     qbSoftHandControl::this_soft_hand_.at(qbSoftHandControl::dev_id_)->getCurrents(currents);
     for (auto &current:currents){
-        std::cout << current << " ";
+        //std::cout << current << " ";
     }
 
     return currents;
@@ -60,7 +60,7 @@ std::vector<int16_t> qbSoftHandControl::GetPositions() {
 
     qbSoftHandControl::this_soft_hand_.at(qbSoftHandControl::dev_id_)->getPositions(positions_);
     for (auto &position:positions_){
-        std::cout << position << " ";
+        //std::cout << position << " ";
     }
     return positions_;
 }
@@ -90,9 +90,9 @@ std::vector<int16_t> qbSoftHandControl::GetAccelerations() {
 bool qbSoftHandControl::SetMotorStates(bool active) {
 
     if (qbSoftHandControl::this_soft_hand_.at(qbSoftHandControl::dev_id_)->setMotorStates(active) == 0){
-        std::cout << "Success setting motor state";
+        std::cout << "Success setting motor state" << std::endl;
     } else {
-        std::cout << "Something went wrong while setting motors state";
+        std::cout << "Something went wrong while setting motors state" << std::endl;
     }
     return false;
 }
@@ -101,9 +101,9 @@ bool qbSoftHandControl::GetMotorStates() {
     bool activate = false;
     qbSoftHandControl::this_soft_hand_.at(qbSoftHandControl::dev_id_)->getMotorStates(activate);
     if(activate){
-        std::cout << "Motors are active";
+        std::cout << "Motors are active" << std::endl;
     } else {
-        std::cout << "Motors are not active";
+        std::cout << "Motors are not active" << std::endl;
     }
     return activate;
 }
@@ -113,10 +113,11 @@ void qbSoftHandControl::SetGripValue(int grip, int spread) {  //TODO: Ask Muri a
     control_references.push_back(grip);
     control_references.push_back(spread);
     qbSoftHandControl::this_soft_hand_.at(qbSoftHandControl::dev_id_)->setControlReferences(control_references);
+    /*
     for (auto &control_reference:control_references){
         std::cout << control_reference << " ";
     }
-
+    */
 }
 
 std::vector<float> qbSoftHandControl::GetPositionPID() {
