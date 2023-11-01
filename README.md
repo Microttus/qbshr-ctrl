@@ -13,7 +13,7 @@ and this package utilize this to export the commands for ROS2 support.
 
 This was made as a result of the need for ROS2 support enabling the use of the hand
 for my robotics project at University of Agder Autumn 2023. In the process I 
-received help from multiple persons especially [@kristianmk](https://github.com/kristianmk).
+received help from multiple persons especially @kristianmk.
 
 ### Maintenance
 
