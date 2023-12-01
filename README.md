@@ -85,7 +85,16 @@ One test program is available
 ros2 run qbshr_ctr qbshr_test
 ```
 
-### Step 4 - Include in other packages
+### Step 4 - Enable USB communication
+
+To be able to communicate with the USB port the user have to be added to the dialout gruor.
+Run this command and restart the machine for this changes to take affect.
+
+```text
+sudo gpasswd --add ${USER} dialout
+```
+
+### Step 5 - Include in other packages
 
 For inclusion in yor own ros2 packages add these lines for your cmake
 

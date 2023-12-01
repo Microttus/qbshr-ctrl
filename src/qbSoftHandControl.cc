@@ -47,9 +47,9 @@ std::vector<int16_t> qbSoftHandControl::GetCurrents() {
     std::vector<int16_t> currents;
 
     qbSoftHandControl::this_soft_hand_.at(qbSoftHandControl::dev_id_)->getCurrents(currents);
-    for (auto &current:currents){
-        //std::cout << current << " ";
-    }
+    //for (auto &current:currents){
+    //    std::cout << current << " " << std::endl;
+    //}
 
     return currents;
 }
@@ -59,9 +59,9 @@ std::vector<int16_t> qbSoftHandControl::GetPositions() {
     std::vector<int16_t> positions_;
 
     qbSoftHandControl::this_soft_hand_.at(qbSoftHandControl::dev_id_)->getPositions(positions_);
-    for (auto &position:positions_){
-        //std::cout << position << " ";
-    }
+    //for (auto &position:positions_){
+    //    std::cout << position << " " << std::endl;
+    //}
     return positions_;
 }
 
