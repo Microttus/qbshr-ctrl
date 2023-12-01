@@ -98,7 +98,7 @@ int qbSoftHandHandler::OpenSerialPort(const std::string &serial_port) {
         return -1;
     }
     if(qbSoftHandHandler::communication_handler_->openSerialPort(serial_port) < 0){
-        std::cerr << "Not able to open: " << serial_port << " serial port";
+        std::cerr << "Not able to open: " << serial_port << " serial port" << std::endl;
         return -1;
     }
     std::cout << "Opened: " << serial_port << " serial port"<< std::endl;
@@ -108,7 +108,8 @@ int qbSoftHandHandler::OpenSerialPort(const std::string &serial_port) {
 std::vector<qbSoftHandControl> qbSoftHandHandler::ReturnDeviceMap(){
     qbSoftHandHandler::ScanForDevices(3);
 
-    std::map<int, std::shared_ptr<qbrobotics_research_api::qbSoftHandLegacyResearch> >::iterator it_device_ = qbSoftHandHandler::soft_hands_detected_.begin();
+    std::map<int, std::shared_ptr<qbrobotics_research_api::qbSoftHandLegacyResearch> >::iterator it_device_ = nullptr_t;
+    it_device_ = qbSoftHandHandler::soft_hands_detected_.begin();
 
     while (it_device_ != qbSoftHandHandler::soft_hands_detected_.end())
     {
