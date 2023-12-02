@@ -64,6 +64,7 @@ target_link_libraries(qbshr_test
         PRIVATE
         qbrobotics_driver::qbrobotics_driver
         ${CMAKE_PROJECT_NAME}
+        Serial
 )
 
 #ament_target_dependencies(qbshr_test
@@ -96,6 +97,9 @@ ament_export_include_directories(include/${CMAKE_PROJECT_NAME})
 ament_export_libraries(${CMAKE_PROJECT_NAME} qbrobotics_driver Serial)
 ament_export_targets(${CMAKE_PROJECT_NAME})
 
-ament_export_dependencies(ament_cmake)
+ament_export_dependencies(ament_cmake
+        rclcpp
+        Serial
+        qbrobotics_driver)
 
 ament_package()

@@ -108,7 +108,7 @@ int qbSoftHandHandler::OpenSerialPort(const std::string &serial_port) {
 std::vector<qbSoftHandControl> qbSoftHandHandler::ReturnDeviceMap(){
     qbSoftHandHandler::ScanForDevices(3);
 
-    std::map<int, std::shared_ptr<qbrobotics_research_api::qbSoftHandLegacyResearch> >::iterator it_device_ = nullptr_t;
+    std::map<int, std::shared_ptr<qbrobotics_research_api::qbSoftHandLegacyResearch> >::iterator it_device_;
     it_device_ = qbSoftHandHandler::soft_hands_detected_.begin();
 
     while (it_device_ != qbSoftHandHandler::soft_hands_detected_.end())
@@ -120,4 +120,5 @@ std::vector<qbSoftHandControl> qbSoftHandHandler::ReturnDeviceMap(){
     }
 
     return qbSoftHandHandler::device_list_;
+
 };

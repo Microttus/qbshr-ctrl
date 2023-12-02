@@ -90,7 +90,7 @@ std::vector<int16_t> qbSoftHandControl::GetAccelerations() {
 bool qbSoftHandControl::SetMotorStates(bool active) {
 
     if (qbSoftHandControl::this_soft_hand_.at(qbSoftHandControl::dev_id_)->setMotorStates(active) == 0){
-        std::cout << "Success setting motor state" << std::endl;
+        //std::cout << "Success setting motor state" << std::endl;
     } else {
         std::cout << "Something went wrong while setting motors state" << std::endl;
     }
