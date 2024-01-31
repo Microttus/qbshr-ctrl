@@ -4,5 +4,5 @@ As explained in the main the main [README](../README.md) the qbrobotics
 device API should be cloned into this folder.
 
 ```commandline
-https://github.com/Microttus/qbshr_ctr.git
+git clone --recurse-submodules https://bitbucket.org/qbrobotics/qbdevice-api-7.x.x.git
 ```
